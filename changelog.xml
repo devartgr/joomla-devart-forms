@@ -1,1 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<changelogs>
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
+        <version>1.0.0</version>
 
+        <addition>
+            <item>Added full Joomla 6 native DevArt Forms package</item>
+            <item>Added administrator component for creating and managing unlimited forms</item>
+            <item>Added multilingual form builder with language-aware field editing</item>
+            <item>Added support for Text, Email, Textarea, Select, Radio, Checkbox, Checkbox Group, Hidden, Heading, Free Text and Date/Time fields</item>
+            <item>Added built-in field validation with multilingual validation messages</item>
+            <item>Added administrator and user email notifications</item>
+            <item>Added HTML and Plain Text email support</item>
+            <item>Added Reply-To, CC, BCC and custom recipient support</item>
+            <item>Added multilingual success and error messages</item>
+            <item>Added submission manager with search, filters and CSV export</item>
+            <item>Added form backup and restore tools</item>
+            <item>Added Proof of Work anti-spam protection</item>
+            <item>Added Google reCAPTCHA v2 support</item>
+            <item>Added Cloudflare Turnstile support</item>
+            <item>Added GitHub-based Joomla update server support</item>
+        </addition>
+
+        <change>
+            <item>Built using modern Joomla 6 MVC architecture and PHP 8.2+</item>
+            <item>Optimized frontend rendering for responsive and high-performance websites</item>
+            <item>Improved multilingual editing workflow with dedicated language selector</item>
+            <item>Simplified administrator interface following the DevArt UI architecture</item>
+            <item>Optimized submission processing and database queries for large datasets</item>
+            <item>Improved import/export reliability for production deployments</item>
+        </change>
+
+        <security>
+            <item>Added ACL support for administrator operations</item>
+            <item>Added CSRF protection for administrator actions</item>
+            <item>Added SQL parameter binding for all database operations</item>
+            <item>Added server-side validation and safe output escaping</item>
+            <item>Added configurable anti-spam protection with Proof of Work, Google reCAPTCHA and Cloudflare Turnstile</item>
+            <item>Added submission rate limiting and secure email processing</item>
+            <item>Built for Joomla 6 and PHP 8.2+ using modern namespaces and production-safe architecture</item>
+        </security>
+
+        <note>
+            <item>Initial public stable release of DevArt Forms for Joomla 6</item>
+            <item>Built for Joomla 6 only with PHP 8.2+</item>
+            <item>Supports multilingual forms and production-ready deployments</item>
+            <item>Always test on a staging environment before production deployment</item>
+        </note>
+    </changelog>
+</changelogs>
