@@ -14,7 +14,7 @@
             <downloadurl type="full" format="zip">https://github.com/devartgr/joomla-devart-forms/releases/download/v1.0.1/pkg_devartforms_v1.0.1.zip</downloadurl>
         </downloads>
 
-        <sha256>3c6f15624d438615fcd874d6c4e76584fad40b1fbf8a415807f103040f5fc23c</sha256>
+        <sha256>49a6935e7d82f78968ccb5d9a9ee45b36989d2f68870a5118b2dfaca489894d8</sha256>
 
         <changelogurl>https://raw.githubusercontent.com/devartgr/joomla-devart-forms/main/changelog.xml</changelogurl>
 
