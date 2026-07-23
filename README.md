@@ -1,27 +1,29 @@
 # DevArt Forms for Joomla
 
-Professional Joomla 6 forms solution designed for contact forms, feedback forms, business inquiries, registrations, surveys, and high-performance production websites.
+Professional Joomla 6 forms solution designed for contact forms, business inquiries, registrations, feedback, applications, surveys, and high-performance production websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.0-orange)
+![Release](https://img.shields.io/badge/Version-1.0.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
 
-## Overview
+# Overview
 
 DevArt Forms is a modern Joomla 6 native forms component built for creating professional forms with a strong focus on simplicity, performance, security, multilingual support and production-ready architecture.
 
-Unlike overly complex enterprise form builders, DevArt Forms keeps administration clean and intuitive while providing the features required by modern business, editorial, educational, governmental and high-traffic Joomla websites.
+Unlike overly complex enterprise form builders, DevArt Forms provides a clean administrator interface while delivering the functionality required by business websites, organizations, educational institutions, municipalities, publishers and high-traffic Joomla installations.
+
+The extension is designed exclusively for Joomla 6 and modern PHP versions without legacy compatibility layers.
 
 ---
 
-## Features
+# Features
 
-### Form Builder
+## Professional Form Builder
 
-Create unlimited forms using an intuitive visual field builder.
+Create unlimited forms using a clean visual field builder.
 
 Supported field types:
 
@@ -37,39 +39,42 @@ Supported field types:
 - Free Text
 - Date / Time
 
-Features include:
+Field features include:
 
 - Required fields
 - Published state
 - Field ordering
+- Internal field names
 - Multilingual labels
 - Placeholders
 - Descriptions
 - Built-in validation
+- Responsive layouts
 
 ---
 
-### Multilingual Forms
+## Multilingual Support
 
-Complete multilingual support including:
+Complete multilingual editing for:
 
 - Form titles
+- Form descriptions
 - Field labels
 - Placeholders
-- Descriptions
+- Help text
 - Success messages
 - Error messages
 - Email templates
 
-Language editing follows Joomla multilingual best practices.
+Fully compatible with Joomla multilingual websites.
 
 ---
 
-### Email Notifications
+## Email Notifications
 
 Flexible notification system supporting:
 
-- Administrator emails
+- Administrator notifications
 - User confirmation emails
 - HTML emails
 - Plain text emails
@@ -82,7 +87,7 @@ Flexible notification system supporting:
 
 ---
 
-### Submission Manager
+## Submission Manager
 
 Manage form submissions directly inside Joomla.
 
@@ -96,35 +101,37 @@ Features include:
 - Submission details
 - CSV export
 
-Suitable for both small and large datasets.
+Designed for both small and very large websites.
 
 ---
 
-### Security
+## Security
 
 Built-in protection includes:
 
 - Joomla ACL
 - CSRF protection
-- SQL parameter binding
-- Safe output escaping
 - Server-side validation
 - Client-side validation
+- SQL parameter binding
+- Safe output escaping
 - Honeypot protection
 - Proof of Work
 - Google reCAPTCHA v2
 - Cloudflare Turnstile
 - Rate limiting
 
+Anti-spam validation is performed server-side for maximum reliability.
+
 Designed for secure production deployments.
 
 ---
 
-### Backup / Restore
+## Backup & Restore
 
 Portable form management.
 
-Features:
+Features include:
 
 - Export forms
 - Import forms
@@ -132,13 +139,13 @@ Features:
 - Configuration restore
 - Safe validation
 
-Ideal for migrations and backups.
+Ideal for migrations, backups and development workflows.
 
 ---
 
-### Joomla Native Updates
+## Joomla Native Updates
 
-Supports Joomla native updates via GitHub.
+Supports Joomla native update notifications through GitHub.
 
 Update Server:
 
@@ -146,7 +153,7 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-forms/main/update.xml
 
 ---
 
-## Included Extensions
+# Included Extension
 
 This package installs:
 
@@ -154,26 +161,27 @@ This package installs:
 
 ---
 
-## Requirements
+# Requirements
 
 - Joomla 6.x
 - PHP 8.2+
 
 ---
 
-## Performance
+# Performance
 
 Built for production environments.
 
-Features:
+Features include:
 
 - Lightweight frontend
 - Optimized database queries
+- Minimal frontend assets
 - Cache-friendly rendering
-- Cloudflare friendly
+- Cloudflare compatible
 - CDN friendly
 - Responsive layouts
-- Minimal frontend overhead
+- Low resource usage
 
 Suitable for:
 
@@ -184,23 +192,27 @@ Suitable for:
 - Associations
 - NGOs
 - News portals
+- Enterprise deployments
 - High-traffic Joomla websites
 
 ---
 
-## Security Highlights
+# Security Highlights
 
 - Joomla ACL support
 - CSRF protection
+- Server-side validation
 - SQL parameter binding
 - Safe output escaping
-- Server-side validation
-- Secure administrator operations
+- Secure email processing
+- Proof of Work
+- Google reCAPTCHA v2
+- Cloudflare Turnstile
 - Production-safe architecture
 
 ---
 
-## Compatibility
+# Compatibility
 
 Supported:
 
@@ -218,49 +230,63 @@ Not Supported:
 
 ---
 
-## Current Version
+# Current Version
 
-**1.0.0**
+**1.0.1**
 
 ---
 
-## What's New in 1.0.0
+# What's New in 1.0.1
 
-### Added
+## Fixed
+
+- Improved anti-spam validation reliability
+- Improved Cloudflare cache compatibility
+- Fixed CAPTCHA reset handling after successful submissions
+- Fixed repeated submission handling
+- Fixed Proof of Work validation edge cases
+
+## Improved
+
+- Google reCAPTCHA v2 server-side verification
+- Cloudflare Turnstile server-side verification
+- Proof of Work validation workflow
+- CSRF token handling
+- Protected form submission reliability
+- Overall security hardening
+
+## Security
+
+- Strengthened server-side CAPTCHA verification
+- Added stricter validation for invalid and expired anti-spam tokens
+- Improved fail-safe handling for CAPTCHA verification failures
+- Additional production security improvements
+
+---
+
+# Previous Release
+
+## Version 1.0.0
+
+Initial public stable release featuring:
 
 - Professional multilingual form builder
 - Unlimited forms
 - Multiple field types
 - Submission manager
 - CSV export
-- Backup and restore tools
+- Backup & Restore
 - Administrator and user email notifications
 - Proof of Work anti-spam
-- Google reCAPTCHA v2 support
-- Cloudflare Turnstile support
-- Built-in validation engine
+- Google reCAPTCHA v2
+- Cloudflare Turnstile
 - Joomla Update Server support
-
-### Improved
-
-- Joomla 6 native architecture
-- Responsive administrator interface
-- Production-ready database architecture
-- Optimized submission processing
-- Secure email handling
-- High-performance frontend rendering
-
-### Compatibility
-
-- Joomla 6 native architecture
-- PHP 8.2+
-- Production-ready release
 
 ---
 
-## Author
+# Author
 
-Kostas Stathopoulos  
+**Kostas Stathopoulos**  
 DevArt
 
 https://devart.gr
@@ -271,16 +297,16 @@ https://github.com/devartgr/joomla-devart-forms
 
 ---
 
-## License
+# License
 
 GNU General Public License v3.0 (GPLv3)
 
 ---
 
-## Disclaimer / Limitation of Liability
+# Disclaimer
 
 This software is provided "as is", without warranty of any kind.
 
-DevArt shall not be held liable for any damages, data loss, downtime, security incidents, business interruption, loss of profits, or other consequences arising from the use or inability to use this software.
+DevArt shall not be held liable for any damages, data loss, downtime, security incidents, business interruption, loss of profits or other consequences arising from the use or inability to use this software.
 
 Always test updates in a staging environment before deploying to production systems.
