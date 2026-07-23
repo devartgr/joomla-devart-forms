@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <changelogs>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
+        <version>1.0.1</version>
+
+        <fix>
+            <item>Fixed anti-spam validation reliability across all supported protection methods</item>
+            <item>Fixed Cloudflare cache compatibility during protected form submissions</item>
+            <item>Fixed CAPTCHA reset handling after successful form submissions</item>
+            <item>Fixed repeated submission handling after protected requests</item>
+            <item>Fixed several edge cases affecting Proof of Work validation</item>
+        </fix>
+
+        <change>
+            <item>Improved Google reCAPTCHA v2 server-side verification</item>
+            <item>Improved Cloudflare Turnstile server-side verification</item>
+            <item>Improved Proof of Work validation workflow</item>
+            <item>Improved CSRF token handling during protected form submissions</item>
+            <item>Improved compatibility with Cloudflare cached environments</item>
+            <item>Improved overall form submission reliability and validation</item>
+        </change>
+
+        <security>
+            <item>Strengthened server-side CAPTCHA verification</item>
+            <item>Added stricter validation for invalid or expired anti-spam tokens</item>
+            <item>Improved fail-safe handling when CAPTCHA verification cannot be completed</item>
+            <item>Additional security hardening for production deployments</item>
+        </security>
+
+        <note>
+            <item>Maintenance and security update recommended for all DevArt Forms 1.0.0 installations</item>
+        </note>
+    </changelog>
+
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
@@ -49,4 +84,5 @@
             <item>Always test on a staging environment before production deployment</item>
         </note>
     </changelog>
+
 </changelogs>
