@@ -4,6 +4,55 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.5</version>
+
+        <addition>
+            <item>Added an administrator Dashboard hub with New Form, Forms, Submissions and Options actions</item>
+            <item>Expanded packaged languages to 15 locales: en-GB, el-GR, fr-FR, de-DE, es-ES, it-IT, pt-BR, cs-CZ, nl-NL, pl-PL, ru-RU, uk-UA, ja-JP, tr-TR and zh-CN</item>
+            <item>Added configurable submission rate limiting for frontend form posts</item>
+            <item>Added schema compatibility markers through 1.0.5 so Joomla Maintenance Database stays aligned with the package version</item>
+        </addition>
+
+        <fix>
+            <item>Fixed package installer postflight overwriting extension manifest_cache to a stale 1.0.1 version after updates</item>
+            <item>Fixed HTML-unsafe JSON embedding in the administrator submissions template</item>
+            <item>Fixed Free Text / HTML field sanitization on save and frontend rendering</item>
+            <item>Fixed frontend forms ignoring Joomla access levels on display and submit</item>
+            <item>Fixed a possible null fatal when reading the active menu query on the frontend form view</item>
+            <item>Fixed email subject header injection hardening for test emails and live notification subjects</item>
+            <item>Fixed CSV export formula injection by guarding cells that start with =, +, - or @</item>
+            <item>Fixed notification mail failures so a stored submission still reports success while errors are logged</item>
+        </fix>
+
+        <change>
+            <item>Aligned package and component PHP minimum to 8.3.0 for the Joomla 6 production series</item>
+            <item>Preserved curated Greek (el-GR) translations while shipping machine-generated packs for the additional languages</item>
+            <item>Strengthened production hardening around XSS-safe admin output, access checks and email/CSV safety</item>
+        </change>
+
+        <security>
+            <item>Enforced authorised view levels for frontend form display and submission</item>
+            <item>Sanitized Free Text / HTML field content before storage and frontend output</item>
+            <item>Hardened administrator submissions JSON embedding against XSS</item>
+            <item>Hardened email subjects against CRLF header injection</item>
+            <item>Hardened CSV export against spreadsheet formula injection</item>
+        </security>
+
+        <note>
+            <item>Public release after 1.0.1 (intermediate 1.0.2–1.0.4 builds were not published; their changes are included here)</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.1</item>
+            <item>Existing forms and submissions are preserved</item>
+            <item>No destructive database schema changes; schema markers align Joomla update tracking</item>
+            <item>Machine-generated translations are open to native-speaker review</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.1</version>
 
         <fix>
