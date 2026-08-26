@@ -4,6 +4,31 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.6</version>
+
+        <addition>
+            <item>Language files are now also installed under the component language folders for reliable administrator and site loading</item>
+        </addition>
+
+        <fix>
+            <item>Fixed administrator dashboard and hub strings showing as raw language keys after upgrade</item>
+            <item>Removed stale unprefixed com_devartforms.ini files that shadowed the correct {tag}.com_devartforms.ini language packs</item>
+        </fix>
+
+        <note>
+            <item>Language loading hotfix for Joomla 6</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.5</item>
+            <item>Existing forms and submissions are preserved</item>
+            <item>No destructive database schema changes</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.5</version>
 
         <addition>
