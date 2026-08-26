@@ -3,8 +3,8 @@
 Professional Joomla 6 forms solution designed for contact forms, business inquiries, registrations, feedback, applications, surveys, and high-performance production websites.
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
-![PHP](https://img.shields.io/badge/PHP-8.2%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.1-orange)
+![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
+![Release](https://img.shields.io/badge/Version-1.0.5-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -15,7 +15,7 @@ DevArt Forms is a modern Joomla 6 native forms component built for creating prof
 
 Unlike overly complex enterprise form builders, DevArt Forms provides a clean administrator interface while delivering the functionality required by business websites, organizations, educational institutions, municipalities, publishers and high-traffic Joomla installations.
 
-The extension is designed exclusively for Joomla 6 and modern PHP versions without legacy compatibility layers.
+The extension is designed exclusively for Joomla 6 and PHP 8.3+ without legacy compatibility layers.
 
 ---
 
@@ -66,7 +66,14 @@ Complete multilingual editing for:
 - Error messages
 - Email templates
 
-Fully compatible with Joomla multilingual websites.
+Packaged administrator and site languages:
+
+- English (`en-GB`)
+- Greek (`el-GR`, curated)
+- French, German, Spanish, Italian, Brazilian Portuguese
+- Czech, Dutch, Polish, Russian, Ukrainian, Japanese, Turkish, Chinese Simplified
+
+Fully compatible with Joomla multilingual websites. Machine-generated packs are open to native-speaker review.
 
 ---
 
@@ -110,6 +117,7 @@ Designed for both small and very large websites.
 Built-in protection includes:
 
 - Joomla ACL
+- Frontend form access levels
 - CSRF protection
 - Server-side validation
 - Client-side validation
@@ -120,6 +128,8 @@ Built-in protection includes:
 - Google reCAPTCHA v2
 - Cloudflare Turnstile
 - Rate limiting
+- CSV formula-injection guard
+- Email subject header hardening
 
 Anti-spam validation is performed server-side for maximum reliability.
 
@@ -157,14 +167,16 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-forms/main/update.xml
 
 This package installs:
 
-- com_devartforms
+- `com_devartforms`
+
+The package is component-only. It does not contain modules or plugins.
 
 ---
 
 # Requirements
 
 - Joomla 6.x
-- PHP 8.2+
+- PHP 8.3+
 
 ---
 
@@ -197,27 +209,12 @@ Suitable for:
 
 ---
 
-# Security Highlights
-
-- Joomla ACL support
-- CSRF protection
-- Server-side validation
-- SQL parameter binding
-- Safe output escaping
-- Secure email processing
-- Proof of Work
-- Google reCAPTCHA v2
-- Cloudflare Turnstile
-- Production-safe architecture
-
----
-
 # Compatibility
 
 Supported:
 
 - Joomla 6.x
-- PHP 8.2+
+- PHP 8.3+
 - Joomla native updates
 - Modern Joomla MVC architecture
 
@@ -232,39 +229,55 @@ Not Supported:
 
 # Current Version
 
-**1.0.1**
+**1.0.5**
 
 ---
 
-# What's New in 1.0.1
+# What's New in 1.0.5
+
+Public release after 1.0.1. Intermediate 1.0.2–1.0.4 builds were not published; their changes are included here.
+
+## Added
+
+- Administrator Dashboard hub (New Form / Forms / Submissions / Options)
+- 15 packaged languages
+- Configurable submission rate limiting
+- Schema compatibility markers through 1.0.5
 
 ## Fixed
 
-- Improved anti-spam validation reliability
-- Improved Cloudflare cache compatibility
-- Fixed CAPTCHA reset handling after successful submissions
-- Fixed repeated submission handling
-- Fixed Proof of Work validation edge cases
+- Package installer no longer overwrites `manifest_cache` to a stale 1.0.1 after updates
+- HTML-safe JSON embedding in administrator submissions
+- Free Text / HTML field sanitization
+- Frontend access-level enforcement
+- Null-safe active menu query handling
+- Email subject CRLF hardening
+- CSV formula-injection guard
+- Notification mail failures logged without blocking stored submissions
 
-## Improved
+## Changed
 
-- Google reCAPTCHA v2 server-side verification
-- Cloudflare Turnstile server-side verification
-- Proof of Work validation workflow
-- CSRF token handling
-- Protected form submission reliability
-- Overall security hardening
+- PHP minimum aligned to 8.3.0
+- Curated Greek (`el-GR`); additional languages machine-generated and open to review
 
 ## Security
 
-- Strengthened server-side CAPTCHA verification
-- Added stricter validation for invalid and expired anti-spam tokens
-- Improved fail-safe handling for CAPTCHA verification failures
-- Additional production security improvements
+- Access checks, XSS-safe admin JSON, HTML sanitization, email/CSV hardening
+
+Safe update from DevArt Forms 1.0.1. Existing forms and submissions are preserved.
 
 ---
 
-# Previous Release
+# Previous Releases
+
+## Version 1.0.1
+
+Security and CAPTCHA reliability update:
+
+- Anti-spam validation reliability
+- Cloudflare cache compatibility
+- CAPTCHA reset and repeated submission handling
+- reCAPTCHA v2 / Turnstile / Proof of Work improvements
 
 ## Version 1.0.0
 
