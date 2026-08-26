@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.5-orange)
+![Release](https://img.shields.io/badge/Version-1.0.6-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -229,46 +229,40 @@ Not Supported:
 
 # Current Version
 
-**1.0.5**
+**1.0.6**
 
 ---
 
-# What's New in 1.0.5
+# What's New in 1.0.6
 
-Public release after 1.0.1. Intermediate 1.0.2–1.0.4 builds were not published; their changes are included here.
-
-## Added
-
-- Administrator Dashboard hub (New Form / Forms / Submissions / Options)
-- 15 packaged languages
-- Configurable submission rate limiting
-- Schema compatibility markers through 1.0.5
+Language loading hotfix.
 
 ## Fixed
 
-- Package installer no longer overwrites `manifest_cache` to a stale 1.0.1 after updates
-- HTML-safe JSON embedding in administrator submissions
-- Free Text / HTML field sanitization
-- Frontend access-level enforcement
-- Null-safe active menu query handling
-- Email subject CRLF hardening
-- CSV formula-injection guard
-- Notification mail failures logged without blocking stored submissions
+- Administrator dashboard and hub strings no longer show as raw language keys after upgrade
+- Stale unprefixed `com_devartforms.ini` files no longer shadow the prefixed `{tag}.com_devartforms.ini` packs
 
-## Changed
+## Added
 
-- PHP minimum aligned to 8.3.0
-- Curated Greek (`el-GR`); additional languages machine-generated and open to review
+- Language files are also installed under the component `language/` folders for reliable loading
 
-## Security
-
-- Access checks, XSS-safe admin JSON, HTML sanitization, email/CSV hardening
-
-Safe update from DevArt Forms 1.0.1. Existing forms and submissions are preserved.
+Safe update from DevArt Forms 1.0.5. Existing forms and submissions are preserved.
 
 ---
 
 # Previous Releases
+
+## Version 1.0.5
+
+Public release after 1.0.1. Intermediate 1.0.2–1.0.4 builds were not published; their changes are included there.
+
+- Administrator Dashboard hub (New Form / Forms / Submissions / Options)
+- 15 packaged languages
+- Configurable submission rate limiting
+- Production hardening (access levels, XSS-safe admin JSON, HTML sanitization, email/CSV safety)
+- Fixed package installer overwriting `manifest_cache` to a stale 1.0.1 after updates
+- Schema compatibility markers through 1.0.5
+- PHP minimum aligned to 8.3.0
 
 ## Version 1.0.1
 
