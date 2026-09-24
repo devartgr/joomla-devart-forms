@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.6-orange)
+![Release](https://img.shields.io/badge/Version-1.0.7-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -229,28 +229,42 @@ Not Supported:
 
 # Current Version
 
-**1.0.6**
+**1.0.7**
 
 ---
 
-# What's New in 1.0.6
+# What's New in 1.0.7
 
-Language loading hotfix.
-
-## Fixed
-
-- Administrator dashboard and hub strings no longer show as raw language keys after upgrade
-- Stale unprefixed `com_devartforms.ini` files no longer shadow the prefixed `{tag}.com_devartforms.ini` packs
+Joomla 7 forward compatibility, multilingual consent Privacy URL, and SEF form routing.
 
 ## Added
 
-- Language files are also installed under the component `language/` folders for reliable loading
+- Site router for clean menu / SEF form URLs
+- Consent Privacy / Terms URL per language
+- Schema compatibility marker for 1.0.7
 
-Safe update from DevArt Forms 1.0.5. Existing forms and submissions are preserved.
+## Changed
+
+- `getInput()`, `MailerFactoryInterface`, and WebAssetManager for J7-ready APIs
+- Administrator templates no longer rely on deprecated HTMLHelper behavior/grid/bootstrap.tab helpers
+
+## Fixed
+
+- Form view no longer defaults to form id `1` when no id is resolved
+
+Safe update from DevArt Forms 1.0.6. Existing forms and submissions are preserved.
 
 ---
 
 # Previous Releases
+
+## Version 1.0.6
+
+Language loading hotfix.
+
+- Administrator dashboard/hub strings no longer show as raw language keys
+- Stale unprefixed `com_devartforms.ini` files no longer shadow prefixed packs
+- Language files also installed under the component `language/` folders
 
 ## Version 1.0.5
 

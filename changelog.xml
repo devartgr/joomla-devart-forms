@@ -4,7 +4,41 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.7</version>
+
+        <addition>
+            <item>Added a site RouterView for clean menu and SEF form URLs without frontend query-string view/id links</item>
+            <item>Consent / GDPR Privacy / Terms URL is now editable per language</item>
+            <item>Added schema compatibility marker for 1.0.7</item>
+        </addition>
+
+        <change>
+            <item>Replaced deprecated Application input property usage with getInput()</item>
+            <item>Replaced Factory::getMailer() with MailerFactoryInterface from the DI container</item>
+            <item>Frontend form CSS/JS now loads through WebAssetManager</item>
+            <item>Administrator list and edit templates no longer depend on deprecated HTMLHelper behavior, grid, bootstrap.tab or form.token helpers</item>
+        </change>
+
+        <fix>
+            <item>Form view no longer falls back to form id 1 when no menu item or id is resolved</item>
+        </fix>
+
+        <note>
+            <item>Joomla 7 forward-compatibility hardening for Joomla 6 production</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.6</item>
+            <item>Existing forms and submissions are preserved</item>
+            <item>No destructive database schema changes</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.6</version>
+
 
         <addition>
             <item>Language files are now also installed under the component language folders for reliable administrator and site loading</item>
