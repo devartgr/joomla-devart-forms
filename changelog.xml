@@ -4,7 +4,28 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.8</version>
+
+        <fix>
+            <item>Site router no longer filters menu items by client_id, which is undefined on Joomla MenuItem objects and triggered PHP warnings in AbstractMenu::getItems</item>
+        </fix>
+
+        <note>
+            <item>Hotfix for site menu routing warnings</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.7</item>
+            <item>Existing forms and submissions are preserved</item>
+            <item>No destructive database schema changes</item>
+            <item>Validated and successfully tested on Joomla</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.7</version>
+
 
         <addition>
             <item>Added a site RouterView for clean menu and SEF form URLs without frontend query-string view/id links</item>

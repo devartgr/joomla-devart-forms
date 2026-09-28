@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.7-orange)
+![Release](https://img.shields.io/badge/Version-1.0.8-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -229,11 +229,25 @@ Not Supported:
 
 # Current Version
 
-**1.0.7**
+**1.0.8**
 
 ---
 
-# What's New in 1.0.7
+# What's New in 1.0.8
+
+Site router MenuItem `$client_id` warning fix.
+
+## Fixed
+
+- Site router no longer filters menu items with undefined `MenuItem::$client_id`
+
+Safe update from DevArt Forms 1.0.7. Existing forms and submissions are preserved.
+
+---
+
+# Previous Releases
+
+## Version 1.0.7
 
 Joomla 7 forward compatibility, multilingual consent Privacy URL, and SEF form routing.
 
@@ -253,10 +267,6 @@ Joomla 7 forward compatibility, multilingual consent Privacy URL, and SEF form r
 - Form view no longer defaults to form id `1` when no id is resolved
 
 Safe update from DevArt Forms 1.0.6. Existing forms and submissions are preserved.
-
----
-
-# Previous Releases
 
 ## Version 1.0.6
 
