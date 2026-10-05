@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.8-orange)
+![Release](https://img.shields.io/badge/Version-1.0.9-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -168,8 +168,9 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-forms/main/update.xml
 This package installs:
 
 - `com_devartforms`
+- `plg_task_devartforms` (scheduled retention purge and optional mail queue)
 
-The package is component-only. It does not contain modules or plugins.
+It does not contain modules.
 
 ---
 
@@ -190,7 +191,7 @@ Features include:
 - Optimized database queries
 - Minimal frontend assets
 - Cache-friendly rendering
-- Cloudflare compatible
+- Cloudflare compatible (set Trusted proxy mode to Cloudflare in Options when the site sits behind Cloudflare; default remains none so spoofable headers are never trusted automatically). Edge IP lists ship as a built-in baseline and can refresh via the purge / `devartforms.cloudflare_ips` scheduled task into a local cache; fetch failures keep the built-in list.
 - CDN friendly
 - Responsive layouts
 - Low resource usage
@@ -229,23 +230,42 @@ Not Supported:
 
 # Current Version
 
-**1.0.8**
+**1.0.9**
 
 ---
 
-# What's New in 1.0.8
+# What's New in 1.0.9
 
-Site router MenuItem `$client_id` warning fix.
+Quality release: Cloudflare-safe IP/rate limiting, scheduled retention, scalable admin submissions, server idempotency, validation hardening, Service→Storage pipeline, i18n, granular submissions ACL, optional mail queue, Forms Trash, and hardening rounds through claim-key / scheduler / outbox recovery.
 
-## Fixed
+## Added
 
-- Site router no longer filters menu items with undefined `MenuItem::$client_id`
+- Independent rate-limit table and CF-aware client IP resolver (CIDR sanity + cached refresh)
+- `plg_task_devartforms`: purge (daily), mailqueue (every 5 minutes), Cloudflare IP refresh (weekly)
+- Stateless PoW + one-time submission keys (`processing` → `completed`, stale takeover)
+- Streaming CSV export and light submissions list
+- Granular submissions ACL (`view` / `export` / `delete`)
+- Forms Trash and Access view level on forms
+- Dashboard scheduler health panel
 
-Safe update from DevArt Forms 1.0.7. Existing forms and submissions are preserved.
+## Changed
+
+- Submit pipeline extracted to site services
+- Export permission defaults to Super User (`core.admin`)
+- Preview search uses LIKE; JSON responses send `nosniff` / no-store headers
+- Package uninstall honours Keep Data On Uninstall
+
+Safe update from DevArt Forms 1.0.8. Existing forms, submissions, and captcha keys are preserved. Install/update seeds Scheduled Tasks once (purge daily, mail queue every 5 minutes, Cloudflare IP refresh weekly when Cloudflare proxy mode is on). Drive Joomla Scheduler via Lazy Scheduler or `php cli/joomla.php scheduler:run`. Keep Data On Uninstall applies to package and component uninstall.
+
+Package SHA-256: `a6feff442d62112ccea083c286a39df318ef66627f14b98ef7857fc50e297e2d`
 
 ---
 
 # Previous Releases
+
+## Version 1.0.8
+
+Site router MenuItem `$client_id` warning fix.
 
 ## Version 1.0.7
 

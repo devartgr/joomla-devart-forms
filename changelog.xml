@@ -4,6 +4,53 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.9</version>
+
+        <addition>
+            <item>Cloudflare-aware client IP resolver, CIDR sanity checks, and cached IP range refresh</item>
+            <item>Independent rate-limit table and scheduled retention purge</item>
+            <item>Scheduled task plugin plg_task_devartforms (purge daily, mailqueue every 5 minutes, Cloudflare IP refresh weekly)</item>
+            <item>Stateless HMAC Proof of Work and one-time submission keys with processing/completed claim lifecycle</item>
+            <item>Streaming CSV export, light submissions list, and JSON submission detail view</item>
+            <item>Service to Storage site submission pipeline</item>
+            <item>Granular submissions ACL actions view, export, and delete</item>
+            <item>Optional queued mail delivery with mail_status tracking and FPM outbox recovery</item>
+            <item>Forms Trash soft-delete and Access view level on forms</item>
+            <item>Dashboard scheduler health panel</item>
+        </addition>
+
+        <change>
+            <item>HTML sanitizer now uses Joomla InputFilter whitelist</item>
+            <item>Option and consent validation hardened server-side</item>
+            <item>IP and user-agent storage options are hash or none only</item>
+            <item>Site runtime strings use Joomla Text language keys</item>
+            <item>CSV export requires export ACL or core.admin by default</item>
+            <item>Preview search uses predictable LIKE (FULLTEXT removed)</item>
+            <item>JSON responses send Cache-Control and X-Content-Type-Options nosniff</item>
+            <item>Package uninstall honours keep_data_on_uninstall</item>
+            <item>Scheduler tasks are seeded once; deleted tasks are not recreated</item>
+        </change>
+
+        <security>
+            <item>PoW challenge HMAC binds submission_key (one solved PoW to one submission)</item>
+            <item>Duplicate and in-progress key claims no longer report false success</item>
+            <item>Stale processing keys older than 5 minutes can be safely taken over</item>
+        </security>
+
+        <note>
+            <item>Quality release after hardening rounds for IP, rate limit, retention, scale, idempotency, validation, mail and scheduler</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.8</item>
+            <item>Existing forms, submissions and captcha keys are preserved</item>
+            <item>Drive Joomla Scheduler via Lazy Scheduler or php cli/joomla.php scheduler:run</item>
+            <item>Package composition is com_devartforms plus plg_task_devartforms</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.8</version>
 
         <fix>
