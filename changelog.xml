@@ -4,6 +4,32 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.0.10</version>
+
+        <fix>
+            <item>Install/update no longer shows a warning when component parameters are already flat</item>
+            <item>Options save no longer wipes antispam secrets or internal scheduler markers</item>
+            <item>Dashboard reads nested/legacy component params so Configured and Cloudflare mode stay in sync with Options</item>
+            <item>Secret key fields no longer use lock=true fake placeholders when no secret is stored</item>
+        </fix>
+
+        <addition>
+            <item>plg_extension_devartforms merges partial Options saves into existing component params</item>
+        </addition>
+
+        <note>
+            <item>Maintenance update recommended for sites that saw the nested parameters warning on 1.0.9</item>
+            <item>After update: re-enter secret keys once if they were wiped on 1.0.9, set Trusted Proxy Mode, Save, then check Dashboard</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Safe update from DevArt Forms 1.0.9</item>
+            <item>Existing forms, submissions and settings are preserved</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.9</version>
 
         <addition>

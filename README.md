@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.9-orange)
+![Release](https://img.shields.io/badge/Version-1.0.10-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -230,7 +230,19 @@ Not Supported:
 
 # Current Version
 
-**1.0.9**
+**1.0.10**
+
+---
+
+# What's New in 1.0.10
+
+Quiet install/update: no yellow warning when component parameters are already flat.
+
+Options/Dashboard sync: `plg_extension_devartforms` preserves secrets and scheduler
+markers on Options save, empty password submits keep stored secrets, nested param
+fallbacks for Dashboard.
+
+Safe update from 1.0.9.
 
 ---
 
