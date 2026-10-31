@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.0.10-orange)
+![Release](https://img.shields.io/badge/Version-1.1.0-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -53,6 +53,18 @@ Field features include:
 
 ---
 
+## Embedding Forms
+
+Display a form with any of:
+
+- A menu item of type **DevArt Forms → Form**
+- Site module **DevArt Forms** (`mod_devartforms`) in any module position
+- Article / content shortcode: `{devartform id="123"}` (requires Content - DevArt Forms plugin, enabled by the package)
+
+Multiple forms can appear on the same page.
+
+---
+
 ## Multilingual Support
 
 Complete multilingual editing for:
@@ -66,12 +78,16 @@ Complete multilingual editing for:
 - Error messages
 - Email templates
 
-Packaged administrator and site languages:
+Packaged UI language strings (administrator + site `.ini`):
 
 - English (`en-GB`)
 - Greek (`el-GR`, curated)
 - French, German, Spanish, Italian, Brazilian Portuguese
 - Czech, Dutch, Polish, Russian, Ukrainian, Japanese, Turkish, Chinese Simplified
+
+These UI strings ship with the package and apply when the matching **Joomla language pack** is installed and active. They do not install extra Joomla languages by themselves.
+
+Form field / email / message translations in the form editor follow the site’s **installed content languages** (always including `en-GB`), plus any language tags already stored on that form.
 
 Fully compatible with Joomla multilingual websites. Machine-generated packs are open to native-speaker review.
 
@@ -163,14 +179,15 @@ https://raw.githubusercontent.com/devartgr/joomla-devart-forms/main/update.xml
 
 ---
 
-# Included Extension
+# Included Extensions
 
 This package installs:
 
 - `com_devartforms`
-- `plg_task_devartforms` (scheduled retention purge and optional mail queue)
-
-It does not contain modules.
+- `plg_task_devartforms` (scheduled retention purge, mail queue, Cloudflare IP refresh)
+- `plg_extension_devartforms` (Options params merge)
+- `plg_content_devartforms` (`{devartform id="N"}` shortcode)
+- `mod_devartforms` (site module embed)
 
 ---
 
@@ -230,7 +247,35 @@ Not Supported:
 
 # Current Version
 
-**1.0.10**
+**1.1.0**
+
+---
+
+# What's New in 1.1.0
+
+Feature and polish release after 1.0.10 (unpublished intermediate local builds
+are included here).
+
+## Added
+
+- Per-form Mailchimp (Integrations): enable checkbox + classic Audience signup URL
+  (no API); optional newsletter opt-in under consent; browser-side forward after
+  successful submit
+- Site module `mod_devartforms` and article shortcode `{devartform id="123"}`
+- Module `show_empty_message` switcher; full module/plugin language packs (15 locales)
+
+## Fixed
+
+- Dark mode admin form edit + Security light cards; transparent admin header banners
+- Editor languages follow installed Joomla languages; Translation languages /
+  Display notice no longer hardcode `en-GB, el-GR` / technical fallback
+- Embed language load + unique DOM IDs for multiple instances of the same form
+- Rate-limit default, legacy consent coercion, Mailchimp HTTPS allowlist + warnings
+- J7-ready task/extension plugin providers; content plugin enable on install only
+
+Safe update from 1.0.10.
+
+Package SHA-256: `1787bccfb867c95472f573107105322e8cec6a2760b29e2aea5cdbd5ad1fc6a3`
 
 ---
 

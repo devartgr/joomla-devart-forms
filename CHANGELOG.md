@@ -1,5 +1,57 @@
 # Changelog
 
+## 1.1.0 — 2026-10-31
+
+Public release after 1.0.10. Intermediate local builds (including unpublished
+1.0.11 / 1.0.12 checkpoints and pre-release 1.1.0 polish) are folded into this
+version; they were never published separately.
+
+### Added
+- Per-form Mailchimp integration (Integrations tab): enable checkbox + classic
+  `list-manage.com/subscribe/post` URL (no Marketing API); disable without
+  clearing the URL
+- Optional newsletter opt-in under GDPR consent; choice stored in submissions
+  and `{all_fields}`, with list unsubscribe URL when opted in
+- Browser-side Mailchimp forward after successful submit (Mailchimp blocks
+  server-side classic POSTs with bot/captcha protection)
+- `mod_devartforms` site module and `plg_content_devartforms` shortcode
+  `{devartform id="123"}` for embedding forms outside menu items
+- Module param `show_empty_message` switcher when no form is selected
+- Full language packs for module and content plugin across the 15 shipped locales
+  (machine-generated packs remain open to review)
+
+### Fixed
+- Form edit admin UI respects Joomla dark mode
+- Form editor language list uses installed Joomla content/site languages
+  (was hardcoded to en-GB / el-GR only)
+- Module/shortcode embeds load `com_devartforms` language files before render
+- Duplicate form instances on one page use unique DOM `id`/`for` suffixes
+- General «Translation languages» field lists real editor languages (not
+  hardcoded `en-GB, el-GR`); Display tab lang notice defaults to `en-GB`
+- Rate limit defaults to enabled when the setting key is absent (matches UI)
+- Legacy `consent` fields stored as `type=text` validate as consent
+- Mailchimp subscribe URLs require HTTPS Mailchimp/list-manage hosts; invalid
+  URLs warn and leave integration disabled; forward name truncated to 100 chars
+- Mailchimp consent scan uses coerced validation types (legacy consent aligned)
+- Dark mode readability for Security tab `.bg-light` / `.alert-light` cards
+- Security challenge failures log a WARNING without changing visitor JSON
+- Admin Forms/Submissions/Dashboard header images: no box shadow / radius frame
+  (transparent like other DevArt admin headers)
+- Task and extension plugin providers use current `CMSPlugin` config-only
+  constructor (Joomla 7-ready; matches content plugin)
+- Content shortcode plugin auto-enable on fresh install only (survives intentional disable on update)
+- Missing NEWSLETTER / embed language keys filled across shipped locales
+
+### Notes
+- Safe update from DevArt Forms 1.0.10
+- Requires Joomla 6.0+ and PHP 8.3.0+
+- Install or update using the full `pkg_devartforms` package only
+- Existing forms, submissions and settings are preserved
+- Package: `com_devartforms`, `plg_task_devartforms`, `plg_extension_devartforms`,
+  `plg_content_devartforms`, `mod_devartforms`
+- Verified SHA-256:
+  `1787bccfb867c95472f573107105322e8cec6a2760b29e2aea5cdbd5ad1fc6a3`
+
 ## 1.0.10 — 2026-10-23
 
 ### Fixed

@@ -4,6 +4,50 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.1.0</version>
+
+        <addition>
+            <item>Per-form Mailchimp: enable checkbox + classic list-manage subscribe URL (no API key)</item>
+            <item>Optional newsletter opt-in under consent; stored in submissions and {all_fields}</item>
+            <item>Mailchimp list unsubscribe URL recorded when the visitor opts in</item>
+            <item>Browser-side Mailchimp forward after successful submit</item>
+            <item>Site module mod_devartforms and content shortcode {devartform id="123"}</item>
+            <item>Module show_empty_message switcher when no form is selected</item>
+            <item>Language packs for module and content plugin across the 15 shipped locales</item>
+        </addition>
+
+        <fix>
+            <item>Form edit admin UI supports Joomla dark mode</item>
+            <item>Form editor languages follow installed Joomla content/site languages</item>
+            <item>Module and shortcode embeds load component language files before render</item>
+            <item>Unique DOM id/for suffixes when the same form is embedded more than once</item>
+            <item>Translation languages field and Display lang notice use real editor languages</item>
+            <item>Rate limit defaults to enabled when the saved setting key is absent</item>
+            <item>Legacy consent fields stored as type text validate as consent</item>
+            <item>Mailchimp URLs require HTTPS Mailchimp/list-manage hosts with admin warning on invalid URL</item>
+            <item>Mailchimp forward name truncated; consent scan uses coerced validation types</item>
+            <item>Dark mode readability for Security tab light utility cards</item>
+            <item>Security challenge failures log WARNING without changing visitor JSON</item>
+            <item>Admin header banners no longer show a framed box shadow</item>
+            <item>Task and extension plugin providers use current CMSPlugin config-only constructor</item>
+            <item>Content shortcode plugin auto-enable on fresh install only</item>
+            <item>Filled missing newsletter and embed language keys across shipped locales</item>
+        </fix>
+
+        <note>
+            <item>Public release after 1.0.10; unpublished intermediate local builds are included here</item>
+            <item>Safe update from DevArt Forms 1.0.10</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Existing forms, submissions and settings are preserved</item>
+            <item>Package includes com_devartforms, plg_task_devartforms, plg_extension_devartforms, plg_content_devartforms and mod_devartforms</item>
+            <item>Mailchimp may require double opt-in confirmation before the address appears as subscribed</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.0.10</version>
 
         <fix>

@@ -5,24 +5,25 @@ DevArt Forms — Joomla forms package.
 Certified and published on GitHub
 
 # Current Version
-`1.0.10`
+`1.1.0`
 
 # Verified Package
-`pkg_devartforms_v1.0.10.zip`
+`pkg_devartforms_v1.1.0.zip`
 
 # Verified SHA-256
-`7fb049ff45f4863f256b3c061106721ff5c54a389355f0abd1a7653eeae9e0d6`
+`1787bccfb867c95472f573107105322e8cec6a2760b29e2aea5cdbd5ad1fc6a3`
 
 # GitHub Release
-https://github.com/devartgr/joomla-devart-forms/releases/tag/v1.0.10
+https://github.com/devartgr/joomla-devart-forms/releases/tag/v1.1.0
 
 # Last Completed
-1.0.10: quiet nested-params install; Options/Dashboard sync
-(`plg_extension_devartforms` merge, secret preservation, nested param
-fallbacks). VPS QA confirmed. Public release published.
+1.1.0 public release: Mailchimp newsletter integration, module/shortcode embeds,
+language/dark-mode/header polish, rate-limit/consent/Mailchimp HTTPS hardening,
+J7-ready plugin providers. Local Herd + harness QA PASS. VPS QA confirmed.
+Published to GitHub with update server metadata.
 
 # Current Milestone
-Closed — 1.0.10 released.
+Closed — 1.1.0 released.
 
 # Next
 Next product milestone when requested.
