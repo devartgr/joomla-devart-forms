@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.0-orange)
+![Release](https://img.shields.io/badge/Version-1.1.1-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -247,7 +247,20 @@ Not Supported:
 
 # Current Version
 
-**1.1.0**
+**1.1.1**
+
+---
+
+# What's New in 1.1.1
+
+## Fixed
+
+- Clearing a field Description (including Consent / GDPR) now removes it from the
+  frontend permanently instead of resurrecting an older language fallback value
+
+Safe update from 1.1.0.
+
+Package SHA-256: `3bafe3015627c35ed525c9e4ddc89dcabf99f2f543e40322330630b6630bb103`
 
 ---
 

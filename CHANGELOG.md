@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.1 — 2026-11-17
+
+### Fixed
+- Clearing a field Description (including Consent / GDPR) now removes it from the
+  frontend permanently instead of resurrecting an older language fallback value
+
 ## 1.1.0 — 2026-10-31
 
 Public release after 1.0.10. Intermediate local builds (including unpublished

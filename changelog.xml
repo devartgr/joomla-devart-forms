@@ -4,6 +4,23 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.1.1</version>
+
+        <fix>
+            <item>Clearing a field Description (including Consent / GDPR) now removes it from the frontend permanently</item>
+        </fix>
+
+        <note>
+            <item>Safe update from DevArt Forms 1.1.0</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Existing forms, submissions and settings are preserved</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.1.0</version>
 
         <addition>

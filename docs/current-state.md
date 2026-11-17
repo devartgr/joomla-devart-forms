@@ -4,7 +4,7 @@
 
 Current manifest version:
 
-`1.1.0`
+`1.1.1`
 
 The source contains:
 
@@ -45,10 +45,10 @@ The current source includes:
 
 ## Verification Status
 
-`1.1.0` was validated, built, installed on local Herd sites (`demo3` and
+`1.1.1` was validated, built, installed on local Herd sites (`demo3` and
 `joomla6_tests`), exercised with DevArt QA harness (`qa:component` + curated
 Forms Cypress), and confirmed on the VPS (including admin header transparency
 and audit follow-up). Verified artifact SHA-256:
-`1787bccfb867c95472f573107105322e8cec6a2760b29e2aea5cdbd5ad1fc6a3`.
-Public GitHub release / `update.xml` for `1.1.0` remain pending operator request.
+`3bafe3015627c35ed525c9e4ddc89dcabf99f2f543e40322330630b6630bb103`.
+Public GitHub release / `update.xml` for `1.1.1` remain pending operator request.
 Previous public release remains `v1.0.10`.
