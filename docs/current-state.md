@@ -4,7 +4,7 @@
 
 Current manifest version:
 
-`1.1.1`
+`1.1.2`
 
 The source contains:
 
@@ -15,6 +15,7 @@ The source contains:
 - Content plugin `plg_content_devartforms` (`{devartform id="N"}`)
 - Site module `mod_devartforms`
 - Per-form Mailchimp (enable + HTTPS list-manage URL, browser-side opt-in forward)
+- Consent / GDPR optional per-language Link text for Privacy / Terms URLs
 
 ## Implemented Source
 
@@ -45,10 +46,8 @@ The current source includes:
 
 ## Verification Status
 
-`1.1.1` was validated, built, installed on local Herd sites (`demo3` and
-`joomla6_tests`), exercised with DevArt QA harness (`qa:component` + curated
-Forms Cypress), and confirmed on the VPS (including admin header transparency
-and audit follow-up). Verified artifact SHA-256:
-`3bafe3015627c35ed525c9e4ddc89dcabf99f2f543e40322330630b6630bb103`.
-Public GitHub release / `update.xml` for `1.1.1` remain pending operator request.
-Previous public release remains `v1.0.10`.
+`1.1.2` was validated, built, installed on local Herd sites (`demo3` and
+`joomla6_tests`), exercised with DevArt QA harness (`qa:component` 14/14),
+and confirmed on the VPS. Verified artifact SHA-256:
+`359bde05979a50bd959ac67c6df164a0cdd71aaab58920e6c4b23e55b2b096a6`.
+Public GitHub release: `v1.1.2`.

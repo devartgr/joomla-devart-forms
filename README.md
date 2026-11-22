@@ -4,7 +4,7 @@ Professional Joomla 6 forms solution designed for contact forms, business inquir
 
 ![Joomla](https://img.shields.io/badge/Joomla-6.x-blue)
 ![PHP](https://img.shields.io/badge/PHP-8.3%2B-green)
-![Release](https://img.shields.io/badge/Version-1.1.1-orange)
+![Release](https://img.shields.io/badge/Version-1.1.2-orange)
 ![License](https://img.shields.io/badge/License-GPLv3-red)
 
 ---
@@ -247,7 +247,20 @@ Not Supported:
 
 # Current Version
 
-**1.1.1**
+**1.1.2**
+
+---
+
+# What's New in 1.1.2
+
+## Added
+
+- Consent / GDPR optional per-language **Link text** for the Privacy / Terms URL
+  (empty keeps the default `COM_DEVARTFORMS_PRIVACY_POLICY` language string)
+
+Safe update from 1.1.1.
+
+Package SHA-256: `359bde05979a50bd959ac67c6df164a0cdd71aaab58920e6c4b23e55b2b096a6`
 
 ---
 

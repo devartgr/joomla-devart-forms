@@ -4,6 +4,23 @@
     <changelog>
         <element>pkg_devartforms</element>
         <type>package</type>
+        <version>1.1.2</version>
+
+        <addition>
+            <item>Consent / GDPR optional per-language Link text for the Privacy / Terms URL (empty keeps the default Privacy Policy language string)</item>
+        </addition>
+
+        <note>
+            <item>Safe update from DevArt Forms 1.1.1</item>
+            <item>Requires Joomla 6.0+ and PHP 8.3.0+</item>
+            <item>Install or update using the full pkg_devartforms package only</item>
+            <item>Existing forms, submissions and settings are preserved</item>
+        </note>
+    </changelog>
+
+    <changelog>
+        <element>pkg_devartforms</element>
+        <type>package</type>
         <version>1.1.1</version>
 
         <fix>

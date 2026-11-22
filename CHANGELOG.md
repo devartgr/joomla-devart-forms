@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.1.2 — 2026-11-22
+
+### Added
+- Consent / GDPR optional per-language **Link text** for the Privacy / Terms URL
+  (empty keeps the default `COM_DEVARTFORMS_PRIVACY_POLICY` string)
+
 ## 1.1.1 — 2026-11-17
 
 ### Fixed
